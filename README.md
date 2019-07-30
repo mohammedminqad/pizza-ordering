@@ -4,6 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+=======
+Run `npm i`
+Run `ng --version` and have the following version installed.
+
+`Angular CLI: 8.1.2`
+`Node: 10.16.0`
+`OS: darwin x64`
+`Angular: 8.1.3`
+
 Run `ng serve --live-reload false` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

@@ -1,0 +1,28 @@
+.total-common {
+    border: solid 1px #e5e5e5;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.total-row {
+    display: flex;
+    .total {
+        @extend .total-common;
+        width: 180px;    
+    }
+    .small-total {
+        @extend .total-common;
+        width: 180px;
+    }
+    .medium-total {
+        @extend .total-common;
+        width: 180px;
+    }
+    .large-total {
+        @extend .total-common;
+        width: 180px;
+    }
+    .extra-large-total {
+        @extend .total-common;
+        width: 180px;
+    }
+}

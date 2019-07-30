@@ -1,0 +1,34 @@
+<div class="total-row">
+    <div class="total">
+        Total
+    </div>
+    <div class="small-total">
+        {{totalData.smallTotal | currency}}
+    </div>
+    <div class="medium-total" [style.text-decoration]="totalData.mediumPizzaOfferPrice ? 'line-through' : 'unset'">
+        {{totalData.mediumTotal | currency}}
+    </div>
+    <div class="large-total" [style.text-decoration]="totalData.largePizzaOfferPrice ? 'line-through' : 'unset'">
+        {{totalData.largeTotal | currency}}
+    </div>
+    <div class="extra-large-total">
+        {{totalData.extraLargeTotal | currency}}
+    </div>
+</div>
+<div class="total-row" *ngIf="totalData.mediumPizzaOfferPrice || totalData.largePizzaOfferPrice">
+    <div class="total">
+        Offer
+    </div>
+    <div class="small-total">
+        &nbsp;
+    </div>
+    <div class="medium-total">
+        {{totalData.mediumPizzaOfferPrice | currency}}
+    </div>
+    <div class="large-total">
+        {{totalData.largePizzaOfferPrice  | currency}}
+    </div>
+    <div class="extra-large-total">
+        &nbsp;
+    </div>
+</div>

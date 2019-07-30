@@ -1,0 +1,71 @@
+<form [formGroup]="pizzaForm">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="grid-header col-md-2 text-center"><br>
+                        <h6>Toppings</h6>
+                    </div>
+                    <div class="grid-header col-md-5 text-center"><br>
+                        <h6>Pizza Size</h6>
+                    </div>
+                </div>
+                <div class="grid">
+                    <ul class="list">
+                        <label>Veg Toppings</label>
+                        <li *ngFor="let topping of vegToppings">
+                            {{topping.name}} {{topping.price | currency}})
+                        </li>
+                        <label>Non Veg Toppings</label>
+                        <li *ngFor="let topping of nonVegToppings">
+                            {{topping.name}} {{topping.price | currency}}
+                        </li>
+                    </ul>
+
+                    <ul class="list">
+                        <label>Small($5)</label>
+                        <input type="text" formControlName="smallSize" class="qty"
+                            (keyup)="onQtyChange('small', $event)" />
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="vegToppings"
+                            [pizzaSize]="'small'"></app-pizza-list>
+                        <label>&nbsp;</label>
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="nonVegToppings"
+                            [pizzaSize]="'small'"></app-pizza-list>
+                    </ul>
+                    <ul class="list">
+                        <label>Medium($7)</label>
+                        <input type="text" formControlName="mediumSize" class="qty"
+                            (keyup)="onQtyChange('medium', $event)" />
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="vegToppings"
+                            [pizzaSize]="'medium'"></app-pizza-list>
+                        <label>&nbsp;</label>
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="nonVegToppings"
+                            [pizzaSize]="'medium'"></app-pizza-list>
+                    </ul>
+                    <ul class="list">
+                        <label>Large($8)</label>
+                        <input type="text" formControlName="largeSize" class="qty"
+                            (keyup)="onQtyChange('large', $event)" />
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="vegToppings"
+                            [pizzaSize]="'large'"></app-pizza-list>
+                        <label>&nbsp;</label>
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="nonVegToppings"
+                            [pizzaSize]="'large'"></app-pizza-list>
+                    </ul>
+                    <ul class="list">
+                        <label>Extra Large($9)</label>
+                        <input type="text" formControlName="extraLargeSize" class="qty"
+                            (keyup)="onQtyChange('extraLarge', $event)" />
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="vegToppings"
+                            [pizzaSize]="'extraLarge'"></app-pizza-list>
+                        <label>&nbsp;</label>
+                        <app-pizza-list (toppingSelect)="onToppingSelect($event)" [toppings]="nonVegToppings"
+                            [pizzaSize]="'extraLarge'"></app-pizza-list>
+                    </ul>
+                </div>
+
+                <app-total [totalData]="total"></app-total>
+            </div>
+        </div>
+    </div>
+</form>

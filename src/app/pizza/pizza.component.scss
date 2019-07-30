@@ -1,0 +1,44 @@
+
+
+.row:not(:nth-child(1)) {
+    margin-top: 10px; 
+}
+.grid {
+    display: flex;
+
+    ul.list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px; 
+        min-width: 180px;
+        position: relative;
+        label {
+            text-align: center;
+        }
+        li {
+            min-width: 80px;
+            color: gray;
+            border: solid 1px #e5e5e5;
+            text-align: center;
+            padding: 8px 0px;
+            border-bottom: none;
+
+            &.selected {
+                color: #0aaf79;
+                border-color: #0aaf79;
+            }
+            &:nth-last-child(1), &:nth-child(7) {
+                border-bottom: solid 1px #e5e5e5; 
+            }   
+        }
+    }
+}
+.grid-header {
+    border-bottom: solid 1px #e5e5e5;
+}
+.qty {
+    width: 30px;
+    position: absolute;
+    right: 0px;
+}

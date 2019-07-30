@@ -1,0 +1,6 @@
+<li *ngFor="let topping of toppings">
+    <label class="chk-container">
+        <input type="checkbox" (change)="onToppingSelect(topping.price, topping.name, $event.target.checked)">
+        <span class="checkmark"></span>
+    </label>
+</li>

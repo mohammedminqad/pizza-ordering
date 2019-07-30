@@ -1,0 +1,42 @@
+[
+    {
+        "vegTopings": [
+            {
+                "name": "Tomatoes",
+                "price": 1
+            },
+            {
+                "name": "Onions ",
+                "price": 0.50
+            },
+            {
+                "name": "Bell pepper",
+                "price": 1
+            },
+            {
+                "name": "Mushrooms ",
+                "price": 1
+            },
+            {
+                "name": "Pineapple",
+                "price": 0.75
+            }
+        ]
+    },
+    {
+        "nonVegTopings": [
+            {
+                "name": "Sausage",
+                "price": 1
+            },
+            {
+                "name": "Pepperoni",
+                "price": 2
+            },
+            {
+                "name": "Barbecue chicken",
+                "price": 3
+            }
+        ]
+    }
+]
